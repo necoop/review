@@ -62,3 +62,11 @@ h3 {
 .list {
   display: inline-block;
 }
+@media(max-width: 500px) {
+  .review__inner {
+    flex-direction: column;
+  }
+  .rewiew__person {
+    margin: 0 auto;
+  }
+}
