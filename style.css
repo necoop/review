@@ -1,0 +1,64 @@
+html {
+  font-family: "Open Sans", sans-serif;
+}
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+.review__wrapper {
+  padding: 0 25px;
+  width: 90%;
+}
+.review__box > :not(:first-child) {
+  margin-top: 25px;
+}
+.review__inner {
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+}
+.rewiew__person {
+  width: 170px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+.img__box {
+  padding: 0 10px;
+}
+.person__foto {
+  width: 150px;
+  margin: 0 auto;
+}
+.peron__rating {
+  display: flex;
+}
+.peron__rating img {
+  width: 20px;
+}
+.review__text {
+  padding: 15px;
+  text-align: justify;
+}
+.review__bottom {
+  margin-top: 130px;
+}
+.review__nav {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.review__nav > :not(:first-child) {
+  margin-left: 10px;
+}
+.star__active {
+  fill: #fece3c;;
+}
+.star__inactive {
+  fill: #6c6962;
+}
+.list {
+  display: inline-block;
+}

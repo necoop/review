@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница отзывов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Отзывы наших клиентов:</h3>
+    <div class="review__wrapper">
+        <div class="review__box">
+            <div class="review__inner" v-for="(item, index) in quantity">
+                <div class="rewiew__person">
+                    <div class="img__box">
+                        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="foto" class="person__foto">
+                    </div>
+                    <div class="person__name">
+                        Person {{10* currientList+ index + 1}}
+                    </div>
+                    <div class="peron__rating">
+                        <svg width="25" height="25" class='star__active' v-for="star in stars[index]"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+                        </svg>
+                        <svg width="25" height="25" class='star__inactive' v-for="star in (5 - stars[index])"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M31.547 12a.848.848 0 00-.677-.577l-9.427-1.376-4.224-8.532a.847.847 0 00-1.516 0l-4.218 8.534-9.427 1.355a.847.847 0 00-.467 1.467l6.823 6.664-1.612 9.375a.847.847 0 001.23.893l8.428-4.434 8.432 4.432a.847.847 0 001.229-.894l-1.615-9.373 6.822-6.665a.845.845 0 00.214-.869z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="review__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt maiores illum molestiae
+                    expedita. Commodi dolor recusandae a inventore quo, consectetur dignissimos quas eum necessitatibus
+                    soluta consequuntur amet incidunt dolore adipisci! Sequi, minus officiis adipisci doloribus quae
+                    incidunt eaque recusandae itaque laudantium sunt autem, dolor odio saepe obcaecati excepturi aperiam
+                    at
+                    accusamus minima quidem commodi. Reprehenderit odit nemo, harum soluta porro nobis ducimus
+                    voluptatibus
+                    maxime at animi necessitatibus enim similique quaerat corporis minima ut facere aliquam asperiores,
+                    ipsum est beatae. Qui temporibus vero iste earum dolorum, labore tempora asperiores laudantium nisi
+                    aut
+                    quam. Optio, id officiis. Explicabo adipisci ut deleniti quas illum error quos fugiat aperiam quia.
+                </div>
+            </div>
+        </div>
+
+        <div class="review__bottom">
+            <div class="review__nav">
+                <span>Страница </span>
+                <div class="list" v-for="(currientList, indexList) in activeList">
+                    <a href="#!"v-if="activeList[indexList]" @click="changeList(indexList)">{{indexList + 1}}</a>
+                    <span v-else>{{indexList + 1}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./review.js"></script>
+
+</body>
+
+</html>
